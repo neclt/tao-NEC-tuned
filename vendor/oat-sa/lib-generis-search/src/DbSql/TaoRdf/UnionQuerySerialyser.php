@@ -174,14 +174,14 @@ class UnionQuerySerialyser extends AbstractSqlQuerySerialyser {
                 $this->getDriverEscaper()->dbCommand('WHERE') .
                 $this->operationSeparator .
                 $this->userLanguage . ' ' . $expression;
-
-        if (!empty($this->model)) {
-            $this->query .=  $this->getDriverEscaper()->dbCommand('AND') . ' '.
-                $this->getDriverEscaper()->reserved('modelid') . ' '.
-                $this->getDriverEscaper()->dbCommand('IN') . ' '.
-                '(' . implode(',', $this->model->getReadableModels()) . ')'.
-                $this->operationSeparator ;
-        }
+        //mintre
+        //if (!empty($this->model)) {
+        //    $this->query .=  $this->getDriverEscaper()->dbCommand('AND') . ' '.
+        //       $this->getDriverEscaper()->reserved('modelid') . ' '.
+        //        $this->getDriverEscaper()->dbCommand('IN') . ' '.
+        //        '(' . implode(',', $this->model->getReadableModels()) . ')'.
+        //        $this->operationSeparator ;
+        //}
         $this->query .= ' )'.')';
 
         $this->predicateLoop ++;
