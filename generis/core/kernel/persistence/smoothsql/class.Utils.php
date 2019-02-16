@@ -217,7 +217,8 @@ class core_kernel_persistence_smoothsql_Utils
         }
         
         $query = "SELECT DISTINCT subject FROM statements WHERE (predicate = ${predicate}) AND (${sqlValues}${sqlLang})"
-            .' AND modelid IN ('.implode(',', $model->getReadableModels()).')';
+            //mintre
+            //.' AND modelid IN ('.implode(',', $model->getReadableModels()).')';
         
         return $query;
     }
