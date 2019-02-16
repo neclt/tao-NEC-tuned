@@ -54,7 +54,8 @@ class core_kernel_persistence_smoothsql_Resource
     }
     
     protected function getModelReadSqlCondition() {
-        return 'modelid IN ('.implode(',', $this->model->getReadableModels()).')';
+        // mintre
+        // return 'modelid IN ('.implode(',', $this->model->getReadableModels()).')';
     }
     
     protected function getModelWriteSqlCondition() {
@@ -121,7 +122,8 @@ class core_kernel_persistence_smoothsql_Resource
 		}
 		else{
 			$lang = \common_session_SessionManager::getSession()->getDataLanguage();
-			$defaultLg = ' OR l_language = '.$this->getPersistence()->quote(DEFAULT_LANG).' ';
+            //mintre
+            //$defaultLg = ' OR l_language = '.$this->getPersistence()->quote(DEFAULT_LANG).' ';
 		}
 		
         $query =  'SELECT object, l_language
