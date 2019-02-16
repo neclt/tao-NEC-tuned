@@ -1,3 +1,23 @@
+===========
+Tunned TAO
+
+Idetas SQL uzklausos perrasymo mechanizmas. Atkomentavos loginima, galima stebeti kada uzklausa traukiama is failo ir koks failo vardas bus.
+/usr/share/nginx/html/generis/core/kernel/persistence/smoothsql/class.Class.php
+
+Perrasyta SQL uklausa (naujas failas). Reikia patikrinti ar nepasikeite uzklausa naujai idiegus TAO, nes nurodyti ID uzklausoje, jie gali kisti.
+/usr/share/nginx/html/generis/core/kernel/persistence/smoothsql/generis.rdf_user..sql
+
+Optimizuota SQL uzklausa (ismestas medelid in (1,2,3,4...) ir pasikartojanti language where salyga)
+/usr/share/nginx/html/generis/core/kernel/persistence/smoothsql/clas.Resource.php
+
+Optimizuota SQL uzklausa (ismestas medelid in (1,2,3,4...)
+/usr/share/nginx/html/generis/core/kernel/persistence/smoothsql/clas.Utils.php
+
+Optimizuota SQL uzklausa (ismestas medelid in (1,2,3,4...)
+/usr/share/nginx/html/vendor/oat-sa/lib-generis-search/src/DbSql/TaoRdf/UnionQuerySerialyser.php
+
+===========
+
 package-tao
 ===========
 
