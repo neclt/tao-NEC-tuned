@@ -490,6 +490,25 @@ class core_kernel_persistence_smoothsql_Class extends core_kernel_persistence_sm
         $order = (isset($options['order']) === false) ? '' : $options['order'];
         $orderdir = (isset($options['orderdir']) === false) ? 'ASC' : $options['orderdir'];
 
+                // mintre:
+                $lastpartidx = strrpos($resource->getUri(), '/');
+                $sqlfilename = substr($resource->getUri(), $lastpartidx + 1).'.'.md5(serialize(array_keys($propertyFilte$
+                $sqlfilename = dirname(__FILE__).'/'.strtolower(str_replace('#', '_', $sqlfilename));
+        
+                //error_log($sqlfilename);
+        
+                if (file_exists($sqlfilename)) {
+                    $query = file_get_contents($sqlfilename);
+        
+                    foreach ($propertyFilters as $key => $value) {
+                        $query = str_replace('{{'.$key.'}}', $value, $query);
+                    }
+        
+                    //error_log($query);
+        
+                    return $query;
+                }
+
         if(ServiceManager::getServiceManager()->has(ComplexSearchService::SERVICE_ID)) {
             $search = $this->getModel()->getSearchInterface();
             $query = $search->getQuery($this->getModel(), $rdftypes, $propertyFilters, $and, $like, $lang, $offset, $limit, $order, $orderdir);
