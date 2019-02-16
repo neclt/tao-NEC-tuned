@@ -1,10 +1,10 @@
 ===========
-Tunned TAO
+Tunned TAO login in
 
-Idetas SQL uzklausos perrasymo mechanizmas. Atkomentavos loginima, galima stebeti kada uzklausa traukiama is failo ir koks failo vardas bus.
+Includes SQL query rewriting mechanism. Possible to remove comments to enable logging when query from file and what filename.
 www_files_path/generis/core/kernel/persistence/smoothsql/class.Class.php
 
-Perrasyta SQL uklausa (naujas failas). Reikia patikrinti ar nepasikeite uzklausa naujai idiegus TAO, nes nurodyti ID uzklausoje, jie gali kisti.
+Overwrite SQL query (new file added). You need to check if the request has been changed after the TAO has been installed because the ID in the request can change. User classes ID.
 www_files_path/generis/core/kernel/persistence/smoothsql/generis.rdf_user..sql
 
 Optimized SQL Query (modelid in (1,2,3,4 ...) removed and recurring language where condition).
