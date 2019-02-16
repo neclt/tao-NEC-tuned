@@ -23,7 +23,7 @@ package-tao
 
 Clone repository
 
-    git clone https://github.com/oat-sa/package-tao.git
+    git clone https://github.com/neclt/tao-NEC-tuned.git
     
 Install via composer missing library and extensions
 
